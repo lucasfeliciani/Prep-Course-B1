@@ -22,7 +22,7 @@ function encuentraPares(array){
   // Tu código:
   var pares = []
   for(var i = 0; i < array.length; i++){
-    if(array[i] % 2 == 0) {
+    if(array[i] % 2 === 0) {
       pares.push(array[i])
         
           }
@@ -34,25 +34,29 @@ function elevaAlCuadrado(array){
   // Devuelve un arreglo con cada número del array
   // elevado al cuadrado
   // Tu código:
-  var cuadrado = 0;
-  for(var i = 0; i < array.length; i++){
-    cuadrado.push(math.pow (array[i])) ;
-        
-          }
-    return cuadrado ;
-  }
-  console.log(elevaAlCuadrado)
+  var resultado = array.map (function (num){
+    return Math.pow(num, 2);
+  });
+return resultado;
+}
+
   
   
 function sumaArray(array){
   // Devuelve el resultado de sumar todos los elementos
   // de un arreglo de enteros dado
   // Tu código:
+var resultado = array.reduce(function (acumulador, num){
+return acumulador + num;
+}, 0)
+return resultado;
 }
 
 function numeroDigitos(num){
   // Devuelve el número de dígitos de un número dado
   // Tu código:
+  var numeroAString = num + "";
+  return numeroAString.length;
 }
   
   
